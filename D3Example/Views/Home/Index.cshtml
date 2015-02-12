@@ -30,6 +30,9 @@
     <!-- Morris Charts CSS -->
     <link href="css/plugins/morris.css" rel="stylesheet">
 
+    <!-- Group Bar Graph CSS -->
+    <link href="css/groupBarGraph.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -601,7 +604,14 @@
                                 </div>
                                 <!-- /.col-lg-4 (nested) -->
                                 <div class="col-lg-8">
-                                    <div id="morris-bar-chart"></div>
+                                    <div id="mainContainer" ng-app="AngularD3GroupbarChart">
+                                            <groupbarchart id="d3groupbar" datajson="./json/groupBarGraph.json"
+                                                xaxis-name = ""
+                                                xaxis-pos = ""
+                                                yaxis-name = "Population"
+                                                yaxis-pos = "8"
+                                                d3-format= "">  
+                                    </div>
                                 </div>
                                 <!-- /.col-lg-8 (nested) -->
                             </div>
@@ -922,6 +932,12 @@
 
     </div>
     <!-- /#wrapper -->
+
+    <script type="text/javascript" src="js/prototype.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>   
+    <script src="js/groupBarGraphProto.js"></script>
+    <script src="js/angulard3groupbargraph.js"></script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
